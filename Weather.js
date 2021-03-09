@@ -1,35 +1,37 @@
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
-import PropTypes from "prop-types";
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import PropTypes from 'prop-types';
 
+// Weather 보여주는 ,
+// Text는 temperature가 될꺼야
 export default function Weather({ temp }) {
   return (
     <View style={styles.container}>
-      <Text>{temp}</Text>
+      <Text>{temp}</Text> /
     </View>
   );
 }
 
 Weather.propTypes = {
-    temp: PropTypes.number.isRequired,
+  temp: PropTypes.number.isRequired,
   condition: PropTypes.oneOf([
-    "Thunderstorm",
-    "Drizzle",
-    "Rain",
-    "Snow",
-    "Atmosphere",
-    "Clear",
-    "Clouds",
-    "Haze",
-    "Mist",
-    "Dust"
-  ]).isRequired
+    'Thunderstorm',
+    'Drizzle',
+    'Rain',
+    'Snow',
+    'Atmosphere',
+    'Clear',
+    'Clouds',
+    'Haze',
+    'Mist',
+    'Dust',
+  ]).isRequired,
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center"
-  }
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 });
